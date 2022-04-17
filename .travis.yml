@@ -1,0 +1,15 @@
+language: java
+
+dist: trusty
+
+jdk:
+  - oraclejdk8
+
+sudo: false
+
+script:
+
+  - mvn clear
+  - mvn evosuite:generate
+  - mvn evosuite:export
+  - mvn test
